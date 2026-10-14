@@ -1,0 +1,9 @@
+subject_id,category,true_label,num_cameras_processed,mean_pd_probability,subject_pred_label,majority_pred_label,correct_pred,camera_probabilities
+subject01,HT,0,5,0.462,0,0,True,"{""Camera 1"": 0.46, ""Camera 2"": 0.4467, ""Camera 3"": 0.48, ""Camera 4"": 0.4833, ""Camera 5"": 0.44}"
+subject07,HT,0,6,0.4606,0,0,True,"{""Camera 1"": 0.4967, ""Camera 2"": 0.46, ""Camera 3"": 0.4367, ""Camera 4"": 0.47, ""Camera 5"": 0.4733, ""Camera 6"": 0.4267}"
+subject12,HT,0,6,0.4611,0,0,True,"{""Camera 1"": 0.4633, ""Camera 2"": 0.4633, ""Camera 3"": 0.47, ""Camera 4"": 0.4433, ""Camera 5"": 0.4267, ""Camera 6"": 0.5}"
+subject02,PD,1,6,0.4606,0,0,False,"{""Camera 1"": 0.4467, ""Camera 2"": 0.46, ""Camera 3"": 0.4767, ""Camera 4"": 0.5, ""Camera 5"": 0.4433, ""Camera 6"": 0.4367}"
+subject05,PD,1,5,0.4647,0,0,False,"{""Camera 1"": 0.4667, ""Camera 2"": 0.4667, ""Camera 3"": 0.4467, ""Camera 4"": 0.45, ""Camera 5"": 0.4933}"
+subject08,PD,1,5,0.47,0,0,False,"{""Camera 1"": 0.44, ""Camera 2"": 0.48, ""Camera 3"": 0.4633, ""Camera 4"": 0.47, ""Camera 5"": 0.4967}"
+subject11,PD,1,5,0.4707,0,0,False,"{""Camera 2"": 0.4733, ""Camera 3"": 0.4833, ""Camera 4"": 0.4767, ""Camera 5"": 0.46, ""Camera 6"": 0.46}"
+subject13,PD,1,6,0.4639,0,0,False,"{""Camera 1"": 0.4367, ""Camera 2"": 0.4367, ""Camera 3"": 0.4867, ""Camera 4"": 0.47, ""Camera 5"": 0.4833, ""Camera 6"": 0.47}"

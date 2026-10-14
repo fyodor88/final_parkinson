@@ -1,0 +1,12 @@
+subject_id,true_label,num_videos,mean_pd_probability,predicted_label,correct
+tulip_subject01,0,5,0.4921,0,True
+tulip_subject02,1,6,0.8137,1,True
+tulip_subject05,1,5,0.8131,1,True
+tulip_subject07,0,6,0.5455,1,False
+tulip_subject08,1,5,0.8134,1,True
+tulip_subject11,1,5,0.8136,1,True
+tulip_subject12,0,6,0.4987,0,True
+tulip_subject13,1,6,0.8203,1,True
+tulip_subject_yt_1,1,2,0.5496,1,True
+tulip_subject_yt_2,1,2,0.5502,1,True
+tulip_subject_yt_3,1,2,0.5527,1,True

@@ -1,0 +1,45 @@
+{
+  "candidate_file": "pd_detector_tulip_candidate.pkl",
+  "architecture": "RandomForestClassifier(n_estimators=300, max_depth=4, min_samples_leaf=5, class_weight='balanced')",
+  "feature_count": 288,
+  "feature_contract": "tulip_feature_contract.json (v2.0.0)",
+  "training_provenance": {
+    "dataset": "data/processed/improved_model/tulip_training_dataset.csv",
+    "samples": 44,
+    "subjects": 8,
+    "healthy_subjects": 3,
+    "parkinsons_subjects": 5,
+    "healthy_recordings": 17,
+    "parkinsons_recordings": 27
+  },
+  "validation_methodology": "Leave-One-Subject-Out Cross-Validation (8 folds) & 4-Fold GroupKFold",
+  "validation_results": {
+    "model_name": "RF_Conservative",
+    "logo_vid_accuracy": 0.5454545454545454,
+    "logo_vid_balanced_acc": 0.5315904139433552,
+    "logo_vid_sensitivity": 0.5925925925925926,
+    "logo_vid_specificity": 0.47058823529411764,
+    "logo_vid_f1": 0.6153846153846154,
+    "logo_vid_auc": 0.6187363834422657,
+    "logo_vid_brier": 0.23496265900468527,
+    "logo_vid_cm": "[8,9,11,16]",
+    "logo_subj_accuracy": 0.5,
+    "logo_subj_balanced_acc": 0.4666666666666667,
+    "logo_subj_sensitivity": 0.6,
+    "logo_subj_specificity": 0.3333333333333333,
+    "logo_subj_cm": "[1,2,2,3]",
+    "g4_vid_accuracy": 0.5909090909090909,
+    "g4_vid_sensitivity": 0.6666666666666666,
+    "g4_vid_specificity": 0.47058823529411764,
+    "g4_vid_auc": 0.6252723311546841,
+    "g4_subj_accuracy": 0.5,
+    "g4_subj_sensitivity": 0.6,
+    "g4_subj_specificity": 0.3333333333333333
+  },
+  "limitations": [
+    "Cohort is small (N=8 independent clinical participants: 3 HT, 5 PD).",
+    "Results are exploratory and should not be interpreted as statistically conclusive clinical validation.",
+    "Production default models/pd_detector.pkl remains unchanged to preserve backward compatibility."
+  ],
+  "production_status": "OFFLINE_CANDIDATE_INTEGRATED (Available for explicit candidate evaluation via API/pipeline)"
+}

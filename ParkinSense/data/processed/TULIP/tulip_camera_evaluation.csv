@@ -1,0 +1,7 @@
+camera_id,num_videos,accuracy,precision,recall,f1_score,mean_pd_prob_ht,mean_pd_prob_pd
+Camera 1,7,0.4286,0.0,0.0,0.0,0.4733,0.4475
+Camera 2,8,0.375,0.0,0.0,0.0,0.4567,0.4633
+Camera 3,8,0.375,0.0,0.0,0.0,0.4622,0.4713
+Camera 4,8,0.375,0.0,0.0,0.0,0.4655,0.4733
+Camera 5,8,0.375,0.0,0.0,0.0,0.4467,0.4753
+Camera 6,5,0.4,0.0,0.0,0.0,0.4634,0.4556

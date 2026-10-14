@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+env/
+.pytest_cache/
+
+# Node
+node_modules/
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# macOS
+.DS_Store
+
+# Temporary output and uploaded files
+uploads/
+remote_output/
+remote_input/
+output/
+outputs/
+
+# Editor
+.vscode/

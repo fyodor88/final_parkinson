@@ -1,0 +1,22 @@
+{
+  "candidate_name": "pd_detector_improved.pkl",
+  "architecture": "CalibratedClassifierCV(SVC(kernel=rbf, C=1.0, gamma=scale, class_weight=balanced))",
+  "num_features": 288,
+  "feature_naming_convention": "pose0_mean .. pose71_max (pure biomechanical joint rotations)",
+  "excluded_features": [
+    "fps",
+    "num_frames"
+  ],
+  "preprocessing": {
+    "scaler": "StandardScaler",
+    "calibration": "Platt scaling (sigmoid 3-fold CV)"
+  },
+  "class_mapping": {
+    "0": "Healthy Control",
+    "1": "Parkinsons Disease"
+  },
+  "validation_status": "FAILED_EXTERNAL_GENERALIZATION",
+  "validation_verdict": "REJECTED_FOR_PRODUCTION_DEPLOYMENT",
+  "failure_reason": "In leave-one-dataset-out and leakage-free external evaluation on TULIP, the RBF kernel value collapses to ~0 for all test points due to severe 288-dimensional domain shift (mean distance 1930 vs training 16). The decision function reduces to constant intercept b=+0.301, predicting 100% Parkinson's across all participants (sensitivity 100%, specificity 0%). Tree models conversely predict 0% sensitivity (100% Healthy). Therefore, no candidate achieves acceptable out-of-domain generalization without domain-matched training data.",
+  "production_decision": "Retain models/pd_detector.pkl as production model per Phase 5 Rule 7 to avoid deploying a broken classifier that flags 100% of external videos as Parkinson's."
+}

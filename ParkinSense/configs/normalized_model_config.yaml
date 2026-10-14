@@ -1,0 +1,39 @@
+# ParkinSense Normalized Model Configuration
+
+model:
+  type: RandomForestClassifier
+  n_estimators: 300
+  random_state: 42
+  class_weight: balanced
+  classification_threshold: 0.50
+
+normalization:
+  visibility_threshold: 0.50
+  pelvis_centering: true
+  body_scale_normalization: true
+  canonical_coordinate_frame: true
+  rotation_matrix_validation: true
+  orthogonalization: gram_schmidt
+
+feature_extraction:
+  num_features: 290
+  temporal_features:
+    - fps
+    - num_frames
+  pose_channels: 72
+  summary_stats:
+    - mean
+    - std
+    - min
+    - max
+
+training_dataset:
+  path: data/processed/pd_dataset_mediapipe_normalized.csv
+  source: data/raw/DNE.pkl
+  num_trials: 322
+  num_subjects: 58
+
+test_manifest:
+  path: data/processed/TULIP/tulip_locked_test_manifest.csv
+  num_videos: 44
+  num_subjects: 8

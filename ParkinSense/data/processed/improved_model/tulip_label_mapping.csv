@@ -1,0 +1,5 @@
+category_code,diagnosis_name,target_class,description,clinical_provenance,eligible_for_supervised_training
+HT,Healthy Control,0,Healthy asymptomatic control participant without neurodegenerative disorder,TULIP Clinical Protocol (clinically confirmed negative for Parkinsonism),True
+PD,Parkinsons Disease,1,Diagnosed idiopathic Parkinson's disease participant,TULIP Clinical Protocol (confirmed diagnosis by neurologist / UPDRS motor protocol),True
+YT_HT,YouTube Healthy Control (Unverified),0,Normal walking video downloaded from YouTube search,Unverified online video (no medical records or clinical assessment),False
+YT_PD,YouTube Parkinson's (Unverified),1,Parkinson's disease walking demonstration video downloaded from YouTube search,Unverified online video (no verified medical records or UPDRS scoring),False
