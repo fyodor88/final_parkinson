@@ -1,0 +1,76 @@
+{
+  "scope": "Exploratory DNE-grouped CV, TULIP LOSO, and DNE-only-trained external TULIP evaluation; no combined training.",
+  "dne_path": "data/processed/pd_dataset.csv",
+  "dne_sha256": "1b3ad919e16d4d791c1f32052f78152afe318f40c5548ffeff9a2cece817ef89",
+  "tulip_clinical_path": "data/processed/improved_model/phase2_tulip_clinical_candidate.csv",
+  "tulip_clinical_sha256": "feb0dfe92bb81b01e9f14f2c6b6b486954c85c757df8233b60918a05427259b7",
+  "tulip_continuity_path": "data/processed/improved_model/tulip_training_dataset.csv",
+  "tulip_continuity_sha256": "31f8b3f027716c8007084c442ff3dd7c13ea50a8dd2c8395dd9ea9a84372d7bc",
+  "tulip_youtube_path": "data/processed/improved_model/tulip_youtube_eval_dataset.csv",
+  "tulip_youtube_sha256": "b4b1cbfb05daeea90cd807f402236cd8f48336eac260e7e65c30f990cf23ee2b",
+  "run4_metrics_path": "data/processed/phase4_feature_experiments_run4/phase4_metrics.csv",
+  "seeds": {
+    "dne_outer": [
+      42,
+      123,
+      2026
+    ],
+    "tulip_outer": [
+      42
+    ],
+    "model_random_state": 42,
+    "selector_random_state": 42
+  },
+  "feature_counts": [
+    10,
+    20,
+    30,
+    50
+  ],
+  "selectors": {
+    "corr_rf_importance": "training-fold constant removal + Spearman |rho|>=0.95 filter, then RF impurity importance top-k",
+    "l1_logistic": "training-fold constant removal + StandardScaler + L1 logistic ranking top-k (RF baseline only)"
+  },
+  "models": {
+    "rf_baseline": "RandomForestClassifier(n_estimators=300, class_weight='balanced', random_state=42)",
+    "rf_regularized": "RandomForestClassifier(n_estimators=300, min_samples_leaf=3, max_depth=15, class_weight='balanced', random_state=42)",
+    "svm_rbf": "Pipeline(StandardScaler, SVC(rbf, probability=True)); GridSearchCV({'svc__C': [0.5, 1.0, 10.0], 'svc__gamma': ['scale', 0.01]}) in inner StratifiedGroupKFold",
+    "logreg_l2": "Pipeline(StandardScaler, LogisticRegression(l2)); GridSearchCV({'logisticregression__C': [0.01, 0.1, 1.0, 10.0]}) in inner StratifiedGroupKFold"
+  },
+  "inner_cv": "StratifiedGroupKFold(n_splits=min(3, rarest-class group count), shuffle, seed=outer seed) fitted only on outer-training participants",
+  "threshold": 0.5,
+  "calibration": "Platt scaling fitted on DNE OOF scores only; TULIP labels never used",
+  "probability_interpretation": "model scores, not clinical probabilities",
+  "python": "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:11:29) [Clang 20.1.8 ]",
+  "scikit_learn": "1.7.2",
+  "pandas": "2.3.3",
+  "numpy": "2.3.5",
+  "production_model": {
+    "path": "models/pd_detector.pkl",
+    "sha256": "ad0da7eaa2030578f189b9998eb2f9730a57f7ed41a62144f42941a8a9122702",
+    "type": "RandomForestClassifier",
+    "n_features": 290,
+    "feature_names_first": [
+      "fps",
+      "num_frames",
+      "pose0_mean"
+    ],
+    "feature_names_last": [
+      "pose71_std",
+      "pose71_min",
+      "pose71_max"
+    ],
+    "sklearn_pickle_warning": "Trying to unpickle estimator DecisionTreeClassifier from version 1.9.0 when using version 1.7.2. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:\nhttps://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations"
+  },
+  "domain_classifier": {
+    "domain_classifier": "StandardScaler + L2 LogisticRegression(C=1.0)",
+    "split": "5-fold StratifiedGroupKFold over combined subject groups",
+    "roc_auc_dne_vs_tulip": 1.0,
+    "accuracy_dne_vs_tulip": 1.0,
+    "n_dne_recordings": 322,
+    "n_tulip_recordings": 43,
+    "note": "Uses dataset identity only; no PD labels involved."
+  },
+  "quick_mode": false,
+  "note": "TULIP has project-level historical exposure; results are exploratory external-domain evaluation, not independent clinical validation."
+}

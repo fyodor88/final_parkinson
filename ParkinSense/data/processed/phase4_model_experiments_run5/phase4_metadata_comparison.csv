@@ -1,0 +1,4 @@
+dataset,recordings,fps_min,fps_median,fps_max,num_frames_min,num_frames_median,num_frames_max
+dne,322,60.0,60.0,60.0,20.0,130.0,571.0
+tulip_clinical,43,79.99108237654664,80.00404981269617,80.05841741901222,859.0,1254.0,1395.0
+tulip_youtube_unverified,6,23.976023976023978,29.985014985014985,60.0,247.0,514.0,1387.0

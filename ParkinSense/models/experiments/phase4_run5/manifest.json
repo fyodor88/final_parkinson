@@ -1,0 +1,352 @@
+{
+  "rf_baseline__full_288": {
+    "path": "models/experiments/phase4_run5/rf_baseline__full_288.pkl",
+    "feature_names": [
+      "pose0_mean",
+      "pose0_std",
+      "pose0_min",
+      "pose0_max",
+      "pose1_mean",
+      "..."
+    ],
+    "n_features": 288,
+    "trained_on": "all DNE participants (322 recordings, 58 participants)",
+    "notes": "Experimental artifact only. Not a production model."
+  },
+  "rf_regularized__full_288": {
+    "path": "models/experiments/phase4_run5/rf_regularized__full_288.pkl",
+    "feature_names": [
+      "pose0_mean",
+      "pose0_std",
+      "pose0_min",
+      "pose0_max",
+      "pose1_mean",
+      "..."
+    ],
+    "n_features": 288,
+    "trained_on": "all DNE participants (322 recordings, 58 participants)",
+    "notes": "Experimental artifact only. Not a production model."
+  },
+  "svm_rbf__full_288": {
+    "path": "models/experiments/phase4_run5/svm_rbf__full_288.pkl",
+    "feature_names": [
+      "pose0_mean",
+      "pose0_std",
+      "pose0_min",
+      "pose0_max",
+      "pose1_mean",
+      "..."
+    ],
+    "n_features": 288,
+    "trained_on": "all DNE participants (322 recordings, 58 participants)",
+    "notes": "Experimental artifact only. Not a production model."
+  },
+  "logreg_l2__full_288": {
+    "path": "models/experiments/phase4_run5/logreg_l2__full_288.pkl",
+    "feature_names": [
+      "pose0_mean",
+      "pose0_std",
+      "pose0_min",
+      "pose0_max",
+      "pose1_mean",
+      "..."
+    ],
+    "n_features": 288,
+    "trained_on": "all DNE participants (322 recordings, 58 participants)",
+    "notes": "Experimental artifact only. Not a production model."
+  },
+  "rf_baseline__corr_rf_importance_top10": {
+    "path": "models/experiments/phase4_run5/rf_baseline__corr_rf_importance_top10.pkl",
+    "feature_names": [
+      "pose30_std",
+      "pose3_std",
+      "pose22_std",
+      "pose10_std",
+      "pose33_std",
+      "..."
+    ],
+    "n_features": 10,
+    "trained_on": "all DNE participants (322 recordings, 58 participants)",
+    "notes": "Experimental artifact only. Not a production model."
+  },
+  "rf_regularized__corr_rf_importance_top10": {
+    "path": "models/experiments/phase4_run5/rf_regularized__corr_rf_importance_top10.pkl",
+    "feature_names": [
+      "pose30_std",
+      "pose3_std",
+      "pose22_std",
+      "pose10_std",
+      "pose33_std",
+      "..."
+    ],
+    "n_features": 10,
+    "trained_on": "all DNE participants (322 recordings, 58 participants)",
+    "notes": "Experimental artifact only. Not a production model."
+  },
+  "svm_rbf__corr_rf_importance_top10": {
+    "path": "models/experiments/phase4_run5/svm_rbf__corr_rf_importance_top10.pkl",
+    "feature_names": [
+      "pose30_std",
+      "pose3_std",
+      "pose22_std",
+      "pose10_std",
+      "pose33_std",
+      "..."
+    ],
+    "n_features": 10,
+    "trained_on": "all DNE participants (322 recordings, 58 participants)",
+    "notes": "Experimental artifact only. Not a production model."
+  },
+  "logreg_l2__corr_rf_importance_top10": {
+    "path": "models/experiments/phase4_run5/logreg_l2__corr_rf_importance_top10.pkl",
+    "feature_names": [
+      "pose30_std",
+      "pose3_std",
+      "pose22_std",
+      "pose10_std",
+      "pose33_std",
+      "..."
+    ],
+    "n_features": 10,
+    "trained_on": "all DNE participants (322 recordings, 58 participants)",
+    "notes": "Experimental artifact only. Not a production model."
+  },
+  "rf_baseline__corr_rf_importance_top20": {
+    "path": "models/experiments/phase4_run5/rf_baseline__corr_rf_importance_top20.pkl",
+    "feature_names": [
+      "pose30_std",
+      "pose3_std",
+      "pose22_std",
+      "pose10_std",
+      "pose33_std",
+      "..."
+    ],
+    "n_features": 20,
+    "trained_on": "all DNE participants (322 recordings, 58 participants)",
+    "notes": "Experimental artifact only. Not a production model."
+  },
+  "rf_regularized__corr_rf_importance_top20": {
+    "path": "models/experiments/phase4_run5/rf_regularized__corr_rf_importance_top20.pkl",
+    "feature_names": [
+      "pose30_std",
+      "pose3_std",
+      "pose22_std",
+      "pose10_std",
+      "pose33_std",
+      "..."
+    ],
+    "n_features": 20,
+    "trained_on": "all DNE participants (322 recordings, 58 participants)",
+    "notes": "Experimental artifact only. Not a production model."
+  },
+  "svm_rbf__corr_rf_importance_top20": {
+    "path": "models/experiments/phase4_run5/svm_rbf__corr_rf_importance_top20.pkl",
+    "feature_names": [
+      "pose30_std",
+      "pose3_std",
+      "pose22_std",
+      "pose10_std",
+      "pose33_std",
+      "..."
+    ],
+    "n_features": 20,
+    "trained_on": "all DNE participants (322 recordings, 58 participants)",
+    "notes": "Experimental artifact only. Not a production model."
+  },
+  "logreg_l2__corr_rf_importance_top20": {
+    "path": "models/experiments/phase4_run5/logreg_l2__corr_rf_importance_top20.pkl",
+    "feature_names": [
+      "pose30_std",
+      "pose3_std",
+      "pose22_std",
+      "pose10_std",
+      "pose33_std",
+      "..."
+    ],
+    "n_features": 20,
+    "trained_on": "all DNE participants (322 recordings, 58 participants)",
+    "notes": "Experimental artifact only. Not a production model."
+  },
+  "rf_baseline__corr_rf_importance_top30": {
+    "path": "models/experiments/phase4_run5/rf_baseline__corr_rf_importance_top30.pkl",
+    "feature_names": [
+      "pose30_std",
+      "pose3_std",
+      "pose22_std",
+      "pose10_std",
+      "pose33_std",
+      "..."
+    ],
+    "n_features": 30,
+    "trained_on": "all DNE participants (322 recordings, 58 participants)",
+    "notes": "Experimental artifact only. Not a production model."
+  },
+  "rf_regularized__corr_rf_importance_top30": {
+    "path": "models/experiments/phase4_run5/rf_regularized__corr_rf_importance_top30.pkl",
+    "feature_names": [
+      "pose30_std",
+      "pose3_std",
+      "pose22_std",
+      "pose10_std",
+      "pose33_std",
+      "..."
+    ],
+    "n_features": 30,
+    "trained_on": "all DNE participants (322 recordings, 58 participants)",
+    "notes": "Experimental artifact only. Not a production model."
+  },
+  "svm_rbf__corr_rf_importance_top30": {
+    "path": "models/experiments/phase4_run5/svm_rbf__corr_rf_importance_top30.pkl",
+    "feature_names": [
+      "pose30_std",
+      "pose3_std",
+      "pose22_std",
+      "pose10_std",
+      "pose33_std",
+      "..."
+    ],
+    "n_features": 30,
+    "trained_on": "all DNE participants (322 recordings, 58 participants)",
+    "notes": "Experimental artifact only. Not a production model."
+  },
+  "logreg_l2__corr_rf_importance_top30": {
+    "path": "models/experiments/phase4_run5/logreg_l2__corr_rf_importance_top30.pkl",
+    "feature_names": [
+      "pose30_std",
+      "pose3_std",
+      "pose22_std",
+      "pose10_std",
+      "pose33_std",
+      "..."
+    ],
+    "n_features": 30,
+    "trained_on": "all DNE participants (322 recordings, 58 participants)",
+    "notes": "Experimental artifact only. Not a production model."
+  },
+  "rf_baseline__corr_rf_importance_top50": {
+    "path": "models/experiments/phase4_run5/rf_baseline__corr_rf_importance_top50.pkl",
+    "feature_names": [
+      "pose30_std",
+      "pose3_std",
+      "pose22_std",
+      "pose10_std",
+      "pose33_std",
+      "..."
+    ],
+    "n_features": 50,
+    "trained_on": "all DNE participants (322 recordings, 58 participants)",
+    "notes": "Experimental artifact only. Not a production model."
+  },
+  "rf_regularized__corr_rf_importance_top50": {
+    "path": "models/experiments/phase4_run5/rf_regularized__corr_rf_importance_top50.pkl",
+    "feature_names": [
+      "pose30_std",
+      "pose3_std",
+      "pose22_std",
+      "pose10_std",
+      "pose33_std",
+      "..."
+    ],
+    "n_features": 50,
+    "trained_on": "all DNE participants (322 recordings, 58 participants)",
+    "notes": "Experimental artifact only. Not a production model."
+  },
+  "svm_rbf__corr_rf_importance_top50": {
+    "path": "models/experiments/phase4_run5/svm_rbf__corr_rf_importance_top50.pkl",
+    "feature_names": [
+      "pose30_std",
+      "pose3_std",
+      "pose22_std",
+      "pose10_std",
+      "pose33_std",
+      "..."
+    ],
+    "n_features": 50,
+    "trained_on": "all DNE participants (322 recordings, 58 participants)",
+    "notes": "Experimental artifact only. Not a production model."
+  },
+  "logreg_l2__corr_rf_importance_top50": {
+    "path": "models/experiments/phase4_run5/logreg_l2__corr_rf_importance_top50.pkl",
+    "feature_names": [
+      "pose30_std",
+      "pose3_std",
+      "pose22_std",
+      "pose10_std",
+      "pose33_std",
+      "..."
+    ],
+    "n_features": 50,
+    "trained_on": "all DNE participants (322 recordings, 58 participants)",
+    "notes": "Experimental artifact only. Not a production model."
+  },
+  "rf_baseline__l1_logistic_top10": {
+    "path": "models/experiments/phase4_run5/rf_baseline__l1_logistic_top10.pkl",
+    "feature_names": [
+      "pose45_mean",
+      "pose39_mean",
+      "pose13_std",
+      "pose10_min",
+      "pose59_max",
+      "..."
+    ],
+    "n_features": 10,
+    "trained_on": "all DNE participants (322 recordings, 58 participants)",
+    "notes": "Experimental artifact only. Not a production model."
+  },
+  "rf_baseline__l1_logistic_top20": {
+    "path": "models/experiments/phase4_run5/rf_baseline__l1_logistic_top20.pkl",
+    "feature_names": [
+      "pose45_mean",
+      "pose39_mean",
+      "pose13_std",
+      "pose10_min",
+      "pose59_max",
+      "..."
+    ],
+    "n_features": 20,
+    "trained_on": "all DNE participants (322 recordings, 58 participants)",
+    "notes": "Experimental artifact only. Not a production model."
+  },
+  "rf_baseline__l1_logistic_top30": {
+    "path": "models/experiments/phase4_run5/rf_baseline__l1_logistic_top30.pkl",
+    "feature_names": [
+      "pose45_mean",
+      "pose39_mean",
+      "pose13_std",
+      "pose10_min",
+      "pose59_max",
+      "..."
+    ],
+    "n_features": 30,
+    "trained_on": "all DNE participants (322 recordings, 58 participants)",
+    "notes": "Experimental artifact only. Not a production model."
+  },
+  "rf_baseline__l1_logistic_top50": {
+    "path": "models/experiments/phase4_run5/rf_baseline__l1_logistic_top50.pkl",
+    "feature_names": [
+      "pose45_mean",
+      "pose39_mean",
+      "pose13_std",
+      "pose10_min",
+      "pose59_max",
+      "..."
+    ],
+    "n_features": 50,
+    "trained_on": "all DNE participants (322 recordings, 58 participants)",
+    "notes": "Experimental artifact only. Not a production model."
+  },
+  "rf_baseline__legacy_290_metadata": {
+    "path": "models/experiments/phase4_run5/rf_baseline__legacy_290_metadata.pkl",
+    "feature_names": [
+      "fps",
+      "num_frames",
+      "pose0_mean",
+      "pose0_std",
+      "pose0_min",
+      "..."
+    ],
+    "n_features": 290,
+    "trained_on": "all DNE participants (322 recordings, 58 participants)",
+    "notes": "Experimental artifact only. Not a production model."
+  }
+}

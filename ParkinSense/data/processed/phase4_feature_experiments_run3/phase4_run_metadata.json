@@ -1,0 +1,27 @@
+{
+  "scope": "Separate exploratory DNE-only and TULIP-only experiments; no combined data.",
+  "dne_path": "data/processed/pd_dataset.csv",
+  "dne_sha256": "1b3ad919e16d4d791c1f32052f78152afe318f40c5548ffeff9a2cece817ef89",
+  "tulip_path": "data/processed/improved_model/phase2_tulip_clinical_candidate.csv",
+  "tulip_sha256": "feb0dfe92bb81b01e9f14f2c6b6b486954c85c757df8233b60918a05427259b7",
+  "seeds": {
+    "dne": [
+      42,
+      123,
+      2026
+    ],
+    "tulip": [
+      42
+    ]
+  },
+  "classifier": "RandomForestClassifier(n_estimators=300, class_weight='balanced', random_state=42)",
+  "selectors": {
+    "corr_rf_importance": "constant removal and abs(Spearman rho)>=0.95 filter fitted on outer training fold; RF mean decrease impurity importance fitted on outer training participants; top-k; correlated features can bias/split importance",
+    "l1_logistic": "constant removal, StandardScaler and L1 LogisticRegression(C=1.0, class_weight='balanced', solver='liblinear') fitted on outer training participants; top-k by absolute coefficient"
+  },
+  "threshold": 0.5,
+  "probability_interpretation": "predict_proba-derived uncalibrated scores, not clinical probabilities",
+  "python": "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:11:29) [Clang 20.1.8 ]",
+  "scikit_learn": "1.7.2",
+  "note": "No model artifacts saved. DNE results are exploratory internal reanalysis with collection/session confounding. TULIP results are exploratory only and are not independent external validation."
+}
