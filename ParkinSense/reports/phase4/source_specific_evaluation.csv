@@ -1,0 +1,11 @@
+test_type,model,feature_config,recording_accuracy,recording_sensitivity,recording_specificity,recording_f1,recording_auc,recording_collapse,participant_accuracy,participant_sensitivity,participant_specificity,participant_f1,participant_auc,participant_collapse,n_test_samples,n_test_subjects
+Cross_Domain_DNE_Train_To_TULIP_Test,rf_baseline,full_288,0.3953488372093023,0.0,1.0,0.0,0.5622171945701357,all_predicted_healthy,0.375,0.0,1.0,0.0,0.5333333333333334,all_predicted_healthy,43,8
+Cross_Domain_DNE_Train_To_TULIP_Test,rf_regularized,full_288,0.3953488372093023,0.0,1.0,0.0,0.47058823529411764,all_predicted_healthy,0.375,0.0,1.0,0.0,0.4,all_predicted_healthy,43,8
+Cross_Domain_DNE_Train_To_TULIP_Test,svm_rbf,full_288,0.6046511627906976,1.0,0.0,0.7536231884057971,0.5,all_predicted_pd,0.625,1.0,0.0,0.7692307692307693,0.5,all_predicted_pd,43,8
+Cross_Domain_DNE_Train_To_TULIP_Test,logreg_l2,full_288,0.3953488372093023,0.0,1.0,0.0,0.5384615384615384,all_predicted_healthy,0.375,0.0,1.0,0.0,0.6,all_predicted_healthy,43,8
+Cross_Domain_DNE_Train_To_TULIP_Test,extra_trees,full_288,0.3953488372093023,0.0,1.0,0.0,0.5475113122171946,all_predicted_healthy,0.375,0.0,1.0,0.0,0.7333333333333334,all_predicted_healthy,43,8
+Cross_Domain_DNE_Train_To_TULIP_Test,hist_gb,full_288,0.3953488372093023,0.0,1.0,0.0,0.3981900452488688,all_predicted_healthy,0.375,0.0,1.0,0.0,0.13333333333333336,all_predicted_healthy,43,8
+TULIP_Clinical_LOSO_Within_Domain,rf_baseline,full_288,0.75,0.8,0.6666666666666666,0.8,0.5333333333333334,,0.75,0.8,0.6666666666666666,0.8,0.5333333333333334,,43,8
+TULIP_Clinical_LOSO_Within_Domain,rf_regularized,full_288,0.75,0.8,0.6666666666666666,0.8,0.5333333333333334,,0.75,0.8,0.6666666666666666,0.8,0.5333333333333334,,43,8
+TULIP_Clinical_LOSO_Within_Domain,svm_rbf,full_288,0.25,0.4,0.0,0.4,0.2,,0.25,0.4,0.0,0.4,0.2,,43,8
+TULIP_Clinical_LOSO_Within_Domain,logreg_l2,full_288,0.5,0.6,0.3333333333333333,0.6,0.4,,0.5,0.6,0.3333333333333333,0.6,0.4,,43,8
