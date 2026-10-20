@@ -102,10 +102,25 @@ def _tulip_loso_fold4_training_data() -> tuple[np.ndarray, np.ndarray]:
     return np.array(labels), np.array(groups)
 
 
-def test_fit_model_falls_back_to_defaults_when_inner_fold_is_single_class():
+def test_fit_model_falls_back_to_defaults_when_inner_fold_is_single_class(monkeypatch):
     labels, groups = _tulip_loso_fold4_training_data()
-    splitter = inner_splitter(labels, groups, seed=42)
-    assert splitter is not None
+    idx_h = np.where(labels == 0)[0]
+    idx_p = np.where(labels == 1)[0]
+    mid = len(idx_p) // 2
+
+    class SingleClassInnerSplitter:
+        n_splits = 2
+        def get_n_splits(self, X=None, y=None, groups=None):
+            return 2
+        def split(self, X, y=None, groups=None):
+            yield np.concatenate([idx_h, idx_p[:mid]]), idx_p[mid:]
+            yield np.concatenate([idx_h, idx_p[mid:]]), idx_p[:mid]
+
+    monkeypatch.setattr(
+        "scripts.run_phase4_model_experiments.inner_splitter",
+        lambda y, g, s: SingleClassInnerSplitter(),
+    )
+    splitter = SingleClassInnerSplitter()
     single_class_folds = 0
     X_zero = np.zeros((len(labels), 4))
     for _, test_indices in splitter.split(X_zero, labels, groups):

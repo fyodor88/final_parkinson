@@ -1,0 +1,361 @@
+{
+  "candidate_model": "svm_rbf",
+  "feature_config": "mutual_info_top50",
+  "n_features": 50,
+  "selected_features": [
+    "pose30_std",
+    "pose3_std",
+    "pose45_max",
+    "pose22_std",
+    "pose22_min",
+    "pose17_mean",
+    "pose9_max",
+    "pose6_max",
+    "pose10_std",
+    "pose3_max",
+    "pose64_mean",
+    "pose58_mean",
+    "pose24_mean",
+    "pose0_mean",
+    "pose67_mean",
+    "pose51_max",
+    "pose48_max",
+    "pose55_mean",
+    "pose56_min",
+    "pose37_std",
+    "pose15_min",
+    "pose37_mean",
+    "pose66_mean",
+    "pose50_min",
+    "pose47_mean",
+    "pose23_max",
+    "pose37_min",
+    "pose59_min",
+    "pose0_min",
+    "pose66_min",
+    "pose51_mean",
+    "pose2_max",
+    "pose2_mean",
+    "pose2_min",
+    "pose48_mean",
+    "pose0_max",
+    "pose12_mean",
+    "pose57_min",
+    "pose12_max",
+    "pose35_min",
+    "pose12_std",
+    "pose32_std",
+    "pose24_min",
+    "pose57_mean",
+    "pose41_mean",
+    "pose42_mean",
+    "pose56_std",
+    "pose1_max",
+    "pose3_min",
+    "pose8_min"
+  ],
+  "selection_method": "Random Forest feature importance with cross-correlation filtering (r < 0.85)",
+  "source_data": "All 365 development samples (DNE + eligible TULIP clinical)",
+  "feature_semantics": [
+    {
+      "index": 0,
+      "feature_name": "pose30_std",
+      "channel": 30,
+      "statistic": "std"
+    },
+    {
+      "index": 1,
+      "feature_name": "pose3_std",
+      "channel": 3,
+      "statistic": "std"
+    },
+    {
+      "index": 2,
+      "feature_name": "pose45_max",
+      "channel": 45,
+      "statistic": "max"
+    },
+    {
+      "index": 3,
+      "feature_name": "pose22_std",
+      "channel": 22,
+      "statistic": "std"
+    },
+    {
+      "index": 4,
+      "feature_name": "pose22_min",
+      "channel": 22,
+      "statistic": "min"
+    },
+    {
+      "index": 5,
+      "feature_name": "pose17_mean",
+      "channel": 17,
+      "statistic": "mean"
+    },
+    {
+      "index": 6,
+      "feature_name": "pose9_max",
+      "channel": 9,
+      "statistic": "max"
+    },
+    {
+      "index": 7,
+      "feature_name": "pose6_max",
+      "channel": 6,
+      "statistic": "max"
+    },
+    {
+      "index": 8,
+      "feature_name": "pose10_std",
+      "channel": 10,
+      "statistic": "std"
+    },
+    {
+      "index": 9,
+      "feature_name": "pose3_max",
+      "channel": 3,
+      "statistic": "max"
+    },
+    {
+      "index": 10,
+      "feature_name": "pose64_mean",
+      "channel": 64,
+      "statistic": "mean"
+    },
+    {
+      "index": 11,
+      "feature_name": "pose58_mean",
+      "channel": 58,
+      "statistic": "mean"
+    },
+    {
+      "index": 12,
+      "feature_name": "pose24_mean",
+      "channel": 24,
+      "statistic": "mean"
+    },
+    {
+      "index": 13,
+      "feature_name": "pose0_mean",
+      "channel": 0,
+      "statistic": "mean"
+    },
+    {
+      "index": 14,
+      "feature_name": "pose67_mean",
+      "channel": 67,
+      "statistic": "mean"
+    },
+    {
+      "index": 15,
+      "feature_name": "pose51_max",
+      "channel": 51,
+      "statistic": "max"
+    },
+    {
+      "index": 16,
+      "feature_name": "pose48_max",
+      "channel": 48,
+      "statistic": "max"
+    },
+    {
+      "index": 17,
+      "feature_name": "pose55_mean",
+      "channel": 55,
+      "statistic": "mean"
+    },
+    {
+      "index": 18,
+      "feature_name": "pose56_min",
+      "channel": 56,
+      "statistic": "min"
+    },
+    {
+      "index": 19,
+      "feature_name": "pose37_std",
+      "channel": 37,
+      "statistic": "std"
+    },
+    {
+      "index": 20,
+      "feature_name": "pose15_min",
+      "channel": 15,
+      "statistic": "min"
+    },
+    {
+      "index": 21,
+      "feature_name": "pose37_mean",
+      "channel": 37,
+      "statistic": "mean"
+    },
+    {
+      "index": 22,
+      "feature_name": "pose66_mean",
+      "channel": 66,
+      "statistic": "mean"
+    },
+    {
+      "index": 23,
+      "feature_name": "pose50_min",
+      "channel": 50,
+      "statistic": "min"
+    },
+    {
+      "index": 24,
+      "feature_name": "pose47_mean",
+      "channel": 47,
+      "statistic": "mean"
+    },
+    {
+      "index": 25,
+      "feature_name": "pose23_max",
+      "channel": 23,
+      "statistic": "max"
+    },
+    {
+      "index": 26,
+      "feature_name": "pose37_min",
+      "channel": 37,
+      "statistic": "min"
+    },
+    {
+      "index": 27,
+      "feature_name": "pose59_min",
+      "channel": 59,
+      "statistic": "min"
+    },
+    {
+      "index": 28,
+      "feature_name": "pose0_min",
+      "channel": 0,
+      "statistic": "min"
+    },
+    {
+      "index": 29,
+      "feature_name": "pose66_min",
+      "channel": 66,
+      "statistic": "min"
+    },
+    {
+      "index": 30,
+      "feature_name": "pose51_mean",
+      "channel": 51,
+      "statistic": "mean"
+    },
+    {
+      "index": 31,
+      "feature_name": "pose2_max",
+      "channel": 2,
+      "statistic": "max"
+    },
+    {
+      "index": 32,
+      "feature_name": "pose2_mean",
+      "channel": 2,
+      "statistic": "mean"
+    },
+    {
+      "index": 33,
+      "feature_name": "pose2_min",
+      "channel": 2,
+      "statistic": "min"
+    },
+    {
+      "index": 34,
+      "feature_name": "pose48_mean",
+      "channel": 48,
+      "statistic": "mean"
+    },
+    {
+      "index": 35,
+      "feature_name": "pose0_max",
+      "channel": 0,
+      "statistic": "max"
+    },
+    {
+      "index": 36,
+      "feature_name": "pose12_mean",
+      "channel": 12,
+      "statistic": "mean"
+    },
+    {
+      "index": 37,
+      "feature_name": "pose57_min",
+      "channel": 57,
+      "statistic": "min"
+    },
+    {
+      "index": 38,
+      "feature_name": "pose12_max",
+      "channel": 12,
+      "statistic": "max"
+    },
+    {
+      "index": 39,
+      "feature_name": "pose35_min",
+      "channel": 35,
+      "statistic": "min"
+    },
+    {
+      "index": 40,
+      "feature_name": "pose12_std",
+      "channel": 12,
+      "statistic": "std"
+    },
+    {
+      "index": 41,
+      "feature_name": "pose32_std",
+      "channel": 32,
+      "statistic": "std"
+    },
+    {
+      "index": 42,
+      "feature_name": "pose24_min",
+      "channel": 24,
+      "statistic": "min"
+    },
+    {
+      "index": 43,
+      "feature_name": "pose57_mean",
+      "channel": 57,
+      "statistic": "mean"
+    },
+    {
+      "index": 44,
+      "feature_name": "pose41_mean",
+      "channel": 41,
+      "statistic": "mean"
+    },
+    {
+      "index": 45,
+      "feature_name": "pose42_mean",
+      "channel": 42,
+      "statistic": "mean"
+    },
+    {
+      "index": 46,
+      "feature_name": "pose56_std",
+      "channel": 56,
+      "statistic": "std"
+    },
+    {
+      "index": 47,
+      "feature_name": "pose1_max",
+      "channel": 1,
+      "statistic": "max"
+    },
+    {
+      "index": 48,
+      "feature_name": "pose3_min",
+      "channel": 3,
+      "statistic": "min"
+    },
+    {
+      "index": 49,
+      "feature_name": "pose8_min",
+      "channel": 8,
+      "statistic": "min"
+    }
+  ]
+}

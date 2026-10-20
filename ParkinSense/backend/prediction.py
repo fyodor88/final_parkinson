@@ -141,8 +141,30 @@ class PredictionEngine:
 
         # Step 2: Binary PD Detection
         logger.info("Running PD Detection classifier (Pipeline: %s)...", source_pipeline)
-        pd_probs = self._pd_model.predict_proba(aligned_feature_df)[0]
-        prediction_summary = summarize_binary_prediction(self._pd_model.classes_, pd_probs)
+        if isinstance(self._pd_model, dict):
+            clf = self._pd_model["model"]
+            feat_names = self._pd_model.get("feature_names", list(aligned_feature_df.columns))
+            scaler = self._pd_model.get("scaler")
+            selected_features_df = aligned_feature_df[feat_names]
+            X_eval = scaler.transform(selected_features_df) if scaler is not None else selected_features_df.values
+            pd_probs = clf.predict_proba(X_eval)[0]
+            classes = clf.classes_
+            explainer_model = clf
+            explainer_df = selected_features_df
+            model_type = self._pd_model.get("model_name", type(clf).__name__)
+            n_feat = len(feat_names)
+            n_trees = int(getattr(clf, "n_estimators", 0) or 0)
+        else:
+            clf = self._pd_model
+            pd_probs = clf.predict_proba(aligned_feature_df)[0]
+            classes = clf.classes_
+            explainer_model = clf
+            explainer_df = aligned_feature_df
+            model_type = "Random Forest" if "Forest" in type(clf).__name__ else type(clf).__name__
+            n_feat = int(getattr(clf, "n_features_in_", aligned_feature_df.shape[1]))
+            n_trees = int(getattr(clf, "n_estimators", 0) or 0)
+
+        prediction_summary = summarize_binary_prediction(classes, pd_probs)
         pd_pred_class = prediction_summary["label"]
         pd_probability = prediction_summary["parkinsons_probability"]
         if pd_probability is None:
@@ -162,14 +184,14 @@ class PredictionEngine:
 
         # Step 4: Clinical Explainability
         logger.info("Computing clinical explainability...")
-        explainable_features = self.explainer.explain(self._pd_model, aligned_feature_df, top_k=5)
+        explainable_features = self.explainer.explain(explainer_model, explainer_df, top_k=5)
 
         # Step 5: Metadata & Model Information
         model_info = {
-            "model": "Random Forest",
-            "n_features": int(getattr(self._pd_model, "n_features_in_", aligned_feature_df.shape[1])),
-            "n_trees": int(getattr(self._pd_model, "n_estimators", 0) or 0),
-            "classes": [str(cls) for cls in getattr(self._pd_model, "classes_", [])],
+            "model": model_type,
+            "n_features": n_feat,
+            "n_trees": n_trees,
+            "classes": [str(cls) for cls in getattr(clf, "classes_", [])],
         }
 
         dataset_performance = _load_model_dataset_performance()

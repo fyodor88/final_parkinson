@@ -1,0 +1,7 @@
+cohort_name,total_rows,unique_subjects,healthy_rows,pd_rows,eligible_for_training,status
+DNE (Internal),322,58,205,117,322,RETAINED_BASELINE_CORE
+TULIP Clinical (Eligible),43,8,17,26,43,ADDED_PRIMARY_EXPANSION
+TULIP Clinical (Excluded: subject14_camera3),1,1,0,1,0,EXCLUDED_IDENTITY_CONFLICT
+TULIP YouTube (Unverified),6,6,3,3,0,TRACK_C_EXPLORATORY_ONLY
+Combined Primary Expanded Dataset (DNE + Eligible TULIP Clinical),365,66,222,143,365,OFFICIAL_PRIMARY_EXPANDED_COHORT
+All Discovered Rows (DNE + TULIP Clinical + YouTube),372,72,225,147,365,TOTAL_INVENTORY
