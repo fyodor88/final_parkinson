@@ -24,5 +24,17 @@ remote_input/
 output/
 outputs/
 
+# Deployment: DO NOT ignore these (needed on server)
+!ParkinSense/models/
+!ParkinSense/models/*.pkl
+!ParkinSense/models/*.json
+!ParkinSense/data/input/smpl.csv
+!ParkinSense/data/input/prediction_features.csv
+!ParkinSense/frontend/dist/
+!ParkinSense/frontend/dist/**
+
 # Editor
 .vscode/
+
+# Runtime-generated gait frames (created per-job, not needed in git)
+ParkinSense/static/gait_frames/

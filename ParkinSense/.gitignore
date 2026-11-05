@@ -5,3 +5,11 @@ __pycache__/
 .env
 .DS_Store
 .git/
+
+# Track models and dist for deployment (do NOT ignore)
+!models/
+!models/*.pkl
+!models/*.json
+!data/input/smpl.csv
+!frontend/dist/
+!frontend/dist/**

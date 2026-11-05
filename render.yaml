@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: parkinsense
+    runtime: python
+    region: oregon
+    plan: free
+    rootDir: ParkinSense
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app --bind 0.0.0.0:$PORT --workers 2 --timeout 300 --max-requests 100
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: PORT
+        value: 10000
+      - key: FLASK_ENV
+        value: production
+      - key: PIPELINE_MODE
+        value: mediapipe
+      - key: POSE_SERVICE_MODE
+        value: mock
